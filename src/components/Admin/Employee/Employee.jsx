@@ -109,6 +109,18 @@ const Employee = () => {
                     />
                   </div>
                   <div>
+                    <label htmlFor="doj" className="block text-sm font-medium text-gray-700 mb-1">
+                      Date of Joining (DOJ)
+                    </label>
+                    <input
+                      id="doj"
+                      name="doj"
+                      type="date"
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
                     <label htmlFor="reportingManager" className="block text-sm font-medium text-gray-700 mb-1">
                       Reporting Manager
                     </label>
@@ -122,7 +134,7 @@ const Employee = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="reportingManager" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="employeeEmail" className="block text-sm font-medium text-gray-700 mb-1">
                       Employee Email
                     </label>
                     <input
@@ -135,7 +147,7 @@ const Employee = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="reportingManager" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label htmlFor="reportingEmail" className="block text-sm font-medium text-gray-700 mb-1">
                       Reporting Email
                     </label>
                     <input
@@ -220,18 +232,6 @@ const Employee = () => {
                       className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap"
                     >
                       Reporting Manager
-                    </th>
-                    <th
-                      scope="col"
-                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap"
-                    >
-                      Employee Email
-                    </th>
-                    <th
-                      scope="col"
-                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap"
-                    >
-                      Reporting Email
                     </th>
                   </tr>
                 </thead>
