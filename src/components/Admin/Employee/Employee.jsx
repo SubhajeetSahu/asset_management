@@ -1,9 +1,59 @@
 import { useState } from "react";
 import Sidebar from "../../Sidebar/Sidebar";
+import { Table } from "antd";
 
 
 const Employee = () => {
   const [view, setView] = useState(true);
+
+  const columns = [
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "Designation",
+      dataIndex: "designation",
+      key: "designation",
+    },
+    {
+      title: "Grade",
+      dataIndex: "grade",
+      key: "grade",
+    },
+    {
+      title: "Location",
+      dataIndex: "location",
+      key: "location",
+    },
+    {
+      title: "DOJ",
+      dataIndex: "doj",
+      key: "doj",
+    },
+    {
+      title: "Contact",
+      dataIndex: "contact",
+      key: "contact",
+    },
+    {
+      title: "Employee Email",
+      dataIndex: "employeeEmail",
+      key: "employeeEmail",
+    },
+    {
+      title: "Reporting Manager",
+      dataIndex: "reportingManager",
+      key: "reportingManager",
+    },
+    {
+      title: "Reporting Manager Email",
+      dataIndex: "reportingManagerEmail",
+      key: "reportingManagerEmail",
+    },
+  ];
+
 
 
 
@@ -194,7 +244,7 @@ const Employee = () => {
         <div className="min-h-screen flex">
           <Sidebar />
           <div className="flex-1 bg-gray-100 flex flex-col p-4 items-center justify-center">
-            <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
+            <div className="w-full bg-white shadow-lg rounded-lg overflow-hidden">
 
               <div className="bg-gray-800 text-white py-4 px-6 flex justify-between gap-5">
                 <h2 className="text-2xl font-semibold">Employee Information</h2>
@@ -206,6 +256,10 @@ const Employee = () => {
                 </button>
               </div>
 
+              <div className="overflow-x-auto">
+              <Table columns={columns} style={{whiteSpace: 'nowrap'}}/>
+
+
               
               
               
@@ -215,6 +269,7 @@ const Employee = () => {
               
             </div>
           </div>
+        </div>
         </div>
       )}
     </>
