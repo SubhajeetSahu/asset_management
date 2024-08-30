@@ -1,6 +1,9 @@
 import { useState } from "react";
 import Sidebar from "../../Sidebar/Sidebar";
 import { Table } from "antd";
+import Header from "../../Header/Header";
+
+
 
 
 const Employee = () => {
@@ -65,11 +68,13 @@ const Employee = () => {
     <>
 
       {view && (
+        <>
+
+        <Header title="Admin" />
         <div className="min-h-screen flex">
           <Sidebar />
-          <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-4">
-            <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
-
+          <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-4 mt-14">
+            <div className="w-full bg-white shadow-lg rounded-lg overflow-hidden">
               <div className="bg-gray-800 text-white py-4 px-6 flex justify-between gap-5">
                 <h2 className="text-2xl font-semibold">Add Employee</h2>
                 <button
@@ -238,12 +243,15 @@ const Employee = () => {
             </div>
           </div>
         </div>
+        </>
       )}
 
       {!view && (
+        <>
+        <Header/>
         <div className="min-h-screen flex">
           <Sidebar />
-          <div className="flex-1 bg-gray-100 flex flex-col p-4 items-center justify-center">
+          <div className="flex-1 bg-gray-100 flex flex-col p-4 mt-14">
             <div className="w-full bg-white shadow-lg rounded-lg overflow-hidden">
 
               <div className="bg-gray-800 text-white py-4 px-6 flex justify-between gap-5">
@@ -258,19 +266,11 @@ const Employee = () => {
 
               <div className="overflow-x-auto">
               <Table columns={columns} style={{whiteSpace: 'nowrap'}}/>
-
-
-              
-              
-              
-
-        
-              
-              
             </div>
           </div>
         </div>
         </div>
+        </>
       )}
     </>
   );
