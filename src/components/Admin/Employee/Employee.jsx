@@ -18,14 +18,14 @@ const Employee = () => {
           <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-4">
             <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
 
-              <div className="bg-gray-800 text-white py-4 px-6 flex justify-between">
+              <div className="bg-gray-800 text-white py-4 px-6 flex justify-between gap-5">
                 <h2 className="text-2xl font-semibold">Add Employee</h2>
                 <button
-                onClick={toggleView}
-                className="px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition duration-150 ease-in-out"
-              >
-                View
-              </button>
+                  onClick={toggleView}
+                  className="px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition duration-150 ease-in-out"
+                >
+                  View
+                </button>
               </div>
               <form className="p-6 space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -136,62 +136,63 @@ const Employee = () => {
       )}
 
       {!view && (
-          <div className="min-h-screen flex">
-            <Sidebar />
-            <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-4">
+        <div className="min-h-screen flex">
+          <Sidebar />
+          <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-4">
             <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
 
               <div className="bg-gray-800 text-white py-4 px-6 flex justify-between">
                 <h2 className="text-2xl font-semibold">Employee Information</h2>
                 <button
-                onClick={toggleView}
-                className="px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition duration-150 ease-in-out"
-              >
-                Add
-              </button>
+                  onClick={toggleView}
+                  className="px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition duration-150 ease-in-out"
+                >
+                  Add
+                </button>
               </div>
+              
               <table className="min-w-full divide-y divide-gray-200">
-  <thead className="bg-gray-50">
-    <tr className="flex">
-      <th
-        scope="col"
-        className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-      >
-        Name
-      </th>
-      <th
-        scope="col"
-        className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-      >
-        Designation
-      </th>
-      <th
-        scope="col"
-        className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-      >
-        Grade
-      </th>
-      <th
-        scope="col"
-        className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-      >
-        Location
-      </th>
-      <th
-        scope="col"
-        className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-      >
-        DOJ
-      </th>
-      <th
-        scope="col"
-        className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap"
-      >
-        Reporting Manager
-      </th>
-    </tr>
-  </thead>
-  {/* <tbody className="bg-white divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr className="flex">
+                    <th
+                      scope="col"
+                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Name
+                    </th>
+                    <th
+                      scope="col"
+                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Designation
+                    </th>
+                    <th
+                      scope="col"
+                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Grade
+                    </th>
+                    <th
+                      scope="col"
+                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      Location
+                    </th>
+                    <th
+                      scope="col"
+                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    >
+                      DOJ
+                    </th>
+                    <th
+                      scope="col"
+                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap"
+                    >
+                      Reporting Manager
+                    </th>
+                  </tr>
+                </thead>
+                {/* <tbody className="bg-white divide-y divide-gray-200">
     {employees.map((employee) => (
       <tr key={employee.id} className="flex">
         <td
@@ -227,12 +228,12 @@ const Employee = () => {
       </tr>
     ))}
   </tbody> */}
-</table>
+              </table>
 
 
-              </div>
             </div>
           </div>
+        </div>
       )}
     </>
   );
