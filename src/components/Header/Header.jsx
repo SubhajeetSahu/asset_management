@@ -1,15 +1,13 @@
 
-import PersonIcon from '@mui/icons-material/Person';
-import IconButton from '@mui/material/IconButton';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 
 const Header = () => {
   return (
-    <div className="bg-gray-800 text-white py-4 px-6 flex items-center justify-between">
-      <div className="text-xl font-semibold">Asset Management</div>
-      <IconButton color="inherit" aria-label="user">
-        <PersonIcon />
-      </IconButton>
-    </div>
+    <header className="bg-gray-900 text-white py-4 px-6 flex  fixed w-full justify-between">
+      <h1>Asset Management</h1>
+      <AccountCircleIcon />
+    </header>
   );
 };
 
