@@ -193,7 +193,7 @@ const Employee = () => {
       {!view && (
         <div className="min-h-screen flex">
           <Sidebar />
-          <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-4">
+          <div className="flex-1 bg-gray-100 flex flex-col p-4 items-center justify-center">
             <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
 
               <div className="bg-gray-800 text-white py-4 px-6 flex justify-between gap-5">
@@ -206,14 +206,8 @@ const Employee = () => {
                 </button>
               </div>
 
-              <div className="p-6">
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white">
-                    
-                  </table>
-                </div>
-              </div>
-
+              
+              
               
 
         
