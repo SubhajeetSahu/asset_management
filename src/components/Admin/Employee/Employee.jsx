@@ -31,6 +31,19 @@ const Employee = () => {
               </div>
               <form className="p-6 space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label htmlFor="employeeId" className="block text-sm font-medium text-gray-700 mb-1">
+                      Employee ID
+                    </label>
+                    <input
+                      id="employeeId"
+                      name="employeeId"
+                      type="text"
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="LD000143"
+                    />
+                  </div>
                   <div>
                     <label htmlFor="employeeName" className="block text-sm font-medium text-gray-700 mb-1">
                       Employee Name
@@ -122,19 +135,6 @@ const Employee = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="reportingManager" className="block text-sm font-medium text-gray-700 mb-1">
-                      Reporting Manager
-                    </label>
-                    <input
-                      id="reportingManager"
-                      name="reportingManager"
-                      type="text"
-                      required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-                      placeholder="Jane Smith"
-                    />
-                  </div>
-                  <div>
                     <label htmlFor="employeeEmail" className="block text-sm font-medium text-gray-700 mb-1">
                       Employee Email
                     </label>
@@ -148,8 +148,22 @@ const Employee = () => {
                     />
                   </div>
                   <div>
+                    <label htmlFor="reportingManager" className="block text-sm font-medium text-gray-700 mb-1">
+                      Reporting Manager
+                    </label>
+                    <input
+                      id="reportingManager"
+                      name="reportingManager"
+                      type="text"
+                      required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Jane Smith"
+                    />
+                  </div>
+                
+                  <div>
                     <label htmlFor="reportingEmail" className="block text-sm font-medium text-gray-700 mb-1">
-                      Reporting Email
+                      Reporting Manager Email
                     </label>
                     <input
                       id="reportingEmail"
@@ -182,7 +196,7 @@ const Employee = () => {
           <div className="flex-1 bg-gray-100 flex flex-col items-center justify-center p-4">
             <div className="max-w-2xl w-full bg-white shadow-lg rounded-lg overflow-hidden">
 
-              <div className="bg-gray-800 text-white py-4 px-6 flex justify-between">
+              <div className="bg-gray-800 text-white py-4 px-6 flex justify-between gap-5">
                 <h2 className="text-2xl font-semibold">Employee Information</h2>
                 <button
                   onClick={toggleView}
@@ -191,90 +205,20 @@ const Employee = () => {
                   Add
                 </button>
               </div>
+
+              <div className="p-6">
+                <div className="overflow-x-auto">
+                  <table className="min-w-full bg-white">
+                    
+                  </table>
+                </div>
+              </div>
+
               
 
         
               
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr className="flex">
-                    <th
-                      scope="col"
-                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Name
-                    </th>
-                    <th
-                      scope="col"
-                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Designation
-                    </th>
-                    <th
-                      scope="col"
-                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Grade
-                    </th>
-                    <th
-                      scope="col"
-                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Location
-                    </th>
-                    <th
-                      scope="col"
-                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      DOJ
-                    </th>
-                    <th
-                      scope="col"
-                      className="flex-1 px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider whitespace-nowrap"
-                    >
-                      Reporting Manager
-                    </th>
-                  </tr>
-                </thead>
-                {/* <tbody className="bg-white divide-y divide-gray-200">
-    {employees.map((employee) => (
-      <tr key={employee.id} className="flex">
-        <td
-          className="flex-1 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-        >
-          {employee.name}
-        </td>
-        <td
-          className="flex-1 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-        >
-          {employee.designation}
-        </td>
-        <td
-          className="flex-1 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-        >
-          {employee.grade}
-        </td>
-        <td
-          className="flex-1 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-        >
-          {employee.location}
-        </td>
-        <td
-          className="flex-1 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-        >
-          {employee.doj}
-        </td>
-        <td
-          className="flex-1 px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-        >
-          {employee.reportingManager}
-        </td>
-      </tr>
-    ))}
-  </tbody> */}
-              </table>
-
-
+              
             </div>
           </div>
         </div>
