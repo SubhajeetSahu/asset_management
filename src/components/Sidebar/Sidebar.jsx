@@ -41,13 +41,6 @@ const Sidebar = () => {
           <AddBoxIcon />
           <span>Create Request</span>
         </a>
-        <a
-          href="#"
-          className=" px-3 py-2 rounded-md text-base font-medium text-white bg-gray-700 hover:bg-gray-600 flex items-center space-x-2"
-        >
-          <VisibilityIcon />
-          <span>View Request</span>
-        </a>
       </nav>
     </div>
   );
